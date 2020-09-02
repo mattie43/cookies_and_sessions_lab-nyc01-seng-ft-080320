@@ -1,0 +1,13 @@
+<h3>List of items:</h3>
+<% if @cart %>
+    <% @cart.each do |i| %>
+        <%= i %><br>
+    <% end %>
+<% end %>
+
+<%= form_for item="" do |f| %>
+<%= f.label :item %>
+<%= f.text_field :item %>
+
+<%= f.submit action: products_path, method: :post %>
+<% end %>
